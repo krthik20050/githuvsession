@@ -30,7 +30,7 @@ test.describe('Home Page', () => {
     await expect(summary).toBeVisible();
     await expect(summary.getByText('Total games')).toBeVisible();
     await expect(summary.getByText('Average rating')).toBeVisible();
-    await expect(summary.getByTestId('catalog-summary-total-value')).toHaveText(/\d+/);
-    await expect(summary.getByTestId('catalog-summary-rating-value')).toContainText(/\d+(\.\d+)?\/5|N\/A/);
+    await expect(summary.getByTestId('catalog-summary-total-value')).toHaveText('21');
+    await expect(summary.getByTestId('catalog-summary-rating-value')).toHaveText('3.9/5');
   });
 });
