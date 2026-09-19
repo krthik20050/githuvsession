@@ -25,3 +25,10 @@ export interface Game {
     category: Category | null;
     starRating: number | null;
 }
+
+/** Summary of the current catalog shown on the home page. */
+export interface CatalogSummary {
+    totalGames: number;
+    ratedGames: number;
+    averageRating: number | null;
+}
